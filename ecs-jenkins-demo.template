@@ -152,7 +152,7 @@
       "Type": "AWS::AutoScaling::AutoScalingGroup",
       "Properties": {
         "AvailabilityZones": {
-          "Ref": "AutoscalingGroupAZs"
+          "Fn::GetAZs" : "us-west-2" 
         },
         "VPCZoneIdentifier": {
           "Ref": "PublicSubnets"
